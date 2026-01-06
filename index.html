@@ -9,13 +9,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(rgba(18, 53, 36, 0.85), rgba(18, 53, 36, 0.85)), url('farm_hero.PNG'); background-size: cover; background-position: center; }
+        .hero-gradient { background: linear-gradient(rgba(18, 53, 36, 0.85), rgba(18, 53, 36, 0.85)), url('images/farm_hero.PNG'); background-size: cover; background-position: center; }
         .custom-scrollbar::-webkit-scrollbar { width: 5px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #166534; border-radius: 10px; }
         /* Professional 4-Image Grid */
-        .image-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #e2e8f0; height: 320px; }
+        .image-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #f1f5f9; height: 320px; }
         .image-gallery img { width: 100%; height: 160px; object-fit: cover; transition: transform 0.3s; }
-        .image-gallery img:hover { filter: brightness(1.1); }
+        .image-gallery img:hover { filter: brightness(1.1); transform: scale(1.02); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -23,7 +23,7 @@
     <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="logo.PNG" alt="Healing Root Logo" class="h-16 w-16">
+                <img src="images/logo.PNG" alt="Healing Root Logo" class="h-16 w-16">
                 <div>
                     <h1 class="font-black text-green-900 leading-none text-2xl tracking-tighter uppercase">HEALING ROOT</h1>
                     <p class="text-[10px] text-green-600 tracking-[0.3em] uppercase font-bold">Agro Ventures</p>
@@ -36,31 +36,36 @@
         </div>
     </nav>
 
-    <section class="h-[50vh] flex items-center justify-center text-center text-white hero-gradient px-4">
+    <section class="h-[55vh] flex items-center justify-center text-center text-white hero-gradient px-4">
         <div class="max-w-4xl">
             <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight uppercase tracking-tight">Premium Hybrid <br><span class="text-green-400">Agricultural Seedlings</span></h2>
-            <p class="text-xl text-slate-200 mb-10 font-light max-w-2xl mx-auto">Providing high-yield, disease-resistant solutions for Nigerian farmers.</p>
+            <p class="text-xl text-slate-200 mb-10 font-light max-w-2xl mx-auto">Providing high-yield, disease-resistant solutions for Nigerian farmers to ensure a bountiful tomorrow.</p>
+            <a href="#shop" class="bg-yellow-500 text-green-900 px-10 py-4 rounded-xl font-black uppercase shadow-lg hover:bg-yellow-400 transition-all">Order Seedlings</a>
         </div>
     </section>
 
     <main id="shop" class="max-w-7xl mx-auto px-4 py-20">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="cassava.jpg">
-                    <img src="cassava1.HEIC">
-                    <img src="cassava2.JPG">
-                    <img src="cassava3.JPG">
+                    <img src="images/cassava.jpg">
+                    <img src="images/cassava1.HEIC">
+                    <img src="images/cassava2.JPG">
+                    <img src="images/cassava3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Improved Cassava Stems</h3>
                     <p class="text-green-600 font-bold mb-4 text-sm italic">(TME 419 – IITA Improved)</p>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Early Maturity:</strong> Reaches harvestable stage earlier than local varieties, allowing for quicker returns on investment and reduced exposure to pests.</p>
-                        <p><strong>High Yield:</strong> Develops large, well-filled tubers with excellent starch content. Ideal for commercial and small-scale cassava production.</p>
-                        <p><strong>Disease Resistance:</strong> Specifically bred by IITA to withstand Cassava Mosaic Disease (CMD), reducing crop failure risks.</p>
-                        <p><strong>Processing:</strong> High dry matter content makes it excellent for Garri, Fufu, and industrial starch production.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p class="font-bold text-green-800">Early Maturity</p>
+                        <p>✔ TME 419 is an improved cassava variety developed by the International Institute of Tropical Agriculture (IITA) to help farmers achieve faster harvest cycles. Unlike local varieties that may take longer to mature, TME 419 reaches harvestable stage earlier, allowing farmers to plan production efficiently and enjoy quicker returns on investment.</p>
+                        <p class="font-bold text-green-800">High and Consistent Yield</p>
+                        <p>✔ One of the strongest advantages is its ability to produce high and consistent yields. The variety develops large, well-filled tubers with excellent starch content. Even under varying weather conditions, farmers can rely on stable output.</p>
+                        <p class="font-bold text-green-800">Improved Disease Resistance</p>
+                        <p>✔ Bred to withstand major cassava diseases, particularly Cassava Mosaic Disease (CMD). This results in healthier plants, reduced crop failure, and lower spending on disease control.</p>
+                        <p class="font-bold text-green-800">Excellent Processing Quality</p>
+                        <p>✔ Highly suitable for garri, fufu, cassava flour, starch, and industrial raw materials. Its high dry matter content makes it attractive to processors and agro-industries.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦1,000</span>
@@ -70,27 +75,31 @@
                                 <span id="qty-cas" class="px-3">1</span>
                                 <button onclick="updateQty('cas', 1)" class="w-8 h-8">+</button>
                             </div>
-                            <button onclick="addToCart('Improved Cassava', 1000, 'cas')" class="bg-green-800 text-white px-6 py-3 rounded-xl font-black uppercase text-xs shadow-lg">Add</button>
+                            <button onclick="addToCart('TME 419 Cassava', 1000, 'cas')" class="bg-green-800 text-white px-6 py-3 rounded-xl font-black uppercase text-xs shadow-lg">Add</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="oilpalm.JPG">
-                    <img src="oilpalm1.JPG">
-                    <img src="oilpalm2.JPG">
-                    <img src="oilpalm3.JPG">
+                    <img src="images/oilpalm.JPG">
+                    <img src="images/oilpalm1.JPG">
+                    <img src="images/oilpalm2.JPG">
+                    <img src="images/oilpalm3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Oil Palm Seedlings</h3>
                     <p class="text-green-600 font-bold mb-4 text-sm italic">(Tenera Variety)</p>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>High Oil Yield:</strong> Tenera is the most preferred variety due to high oil content, thin shells, and thick mesocarp.</p>
-                        <p><strong>Fast Growth:</strong> Selected for vigorous early growth, ensuring healthy field performance across various regions.</p>
-                        <p><strong>Early Fruiting:</strong> Starts harvesting fresh fruit bunches sooner than unimproved varieties, ensuring early cash flow.</p>
-                        <p><strong>Investment:</strong> A long-term crop producing for 25-30 years, ideal for building generational wealth.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p class="font-bold text-green-800">High Oil Yield Potential</p>
+                        <p>✔ Tenera seedlings are the most commercially preferred variety due to their exceptionally high oil content. The fruits contain a thin shell and a thick mesocarp, which significantly increases palm oil extraction rates.</p>
+                        <p class="font-bold text-green-800">Fast and Vigorous Growth</p>
+                        <p>✔ Carefully selected for strong early growth, allowing them to establish quickly after transplanting. Ensures healthy field performance across Nigeria.</p>
+                        <p class="font-bold text-green-800">Early Fruiting Advantage</p>
+                        <p>✔ Begins fruiting earlier than unimproved varieties. This means farmers can start harvesting fresh fruit bunches sooner, leading to quicker cash flow.</p>
+                        <p class="font-bold text-green-800">Long-Term Plantation Investment</p>
+                        <p>✔ A long-life crop capable of producing for 25–30 years. It is a long-term agribusiness investment that guarantees sustained income for decades.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦1,000</span>
@@ -100,27 +109,31 @@
                                 <span id="qty-palm" class="px-3">1</span>
                                 <button onclick="updateQty('palm', 1)" class="w-8 h-8">+</button>
                             </div>
-                            <button onclick="addToCart('Oil Palm Tenera', 1000, 'palm')" class="bg-green-800 text-white px-6 py-3 rounded-xl font-black uppercase text-xs shadow-lg">Add</button>
+                            <button onclick="addToCart('Tenera Oil Palm', 1000, 'palm')" class="bg-green-800 text-white px-6 py-3 rounded-xl font-black uppercase text-xs shadow-lg">Add</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="coconut.JPG">
-                    <img src="coconut1.JPG">
-                    <img src="coconut2.WEBP">
-                    <img src="coconut3.JPG">
+                    <img src="images/coconut.JPG">
+                    <img src="images/coconut1.JPG">
+                    <img src="images/coconut2.WEBP">
+                    <img src="images/coconut3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Hybrid Coconut</h3>
                     <p class="text-green-600 font-bold mb-4 text-sm italic">(MYD × WAT)</p>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Superior Hybrid:</strong> Scientific cross between Malayan Yellow Dwarf and West African Tall for max yield and adaptability.</p>
-                        <p><strong>Early Fruiting:</strong> Unlike traditional varieties, this hybrid begins nut production much earlier.</p>
-                        <p><strong>High Yield:</strong> Known for producing more nuts per tree with high-quality coconut water and copra content.</p>
-                        <p><strong>Longevity:</strong> Capable of producing for 40-60 years, providing decades of steady agribusiness income.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p class="font-bold text-green-800">Superior Hybrid Performance</p>
+                        <p>✔ Scientifically developed cross between Malayan Yellow Dwarf and West African Tall. This hybrid combines the best traits of both parent varieties for growth and yield.</p>
+                        <p class="font-bold text-green-800">Early Fruiting Advantage</p>
+                        <p>✔ Unlike traditional tall varieties that take many years to bear fruit, MYD × WAT begins nut production much earlier, allowing for faster returns.</p>
+                        <p class="font-bold text-green-800">High and Consistent Nut Yield</p>
+                        <p>✔ Known for producing more nuts per tree with consistent yields. Nuts have good copra content and quality water, suitable for fresh consumption and oil processing.</p>
+                        <p class="font-bold text-green-800">Long-Term Investment</p>
+                        <p>✔ Capable of producing for 40–60 years when well managed. Provides steady income over decades for building sustainable agribusinesses.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦4,500</span>
@@ -136,21 +149,25 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="cocoa.JPG">
-                    <img src="cocoa1.JPG">
-                    <img src="cocoa2.JPG">
-                    <img src="cocoa3.JPG">
+                    <img src="images/cocoa.JPG">
+                    <img src="images/cocoa1.JPG">
+                    <img src="images/cocoa2.JPG">
+                    <img src="images/cocoa3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Cocoa Nursery Plants</h3>
                     <p class="text-green-600 font-bold mb-4 text-sm italic">(CCN-51 Variety)</p>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Early Bearing:</strong> CCN-51 bears fruit earlier than traditional types, shortening the waiting period for revenue.</p>
-                        <p><strong>Yield:</strong> High pod and bean yield per hectare leads to increased productivity and income stability.</p>
-                        <p><strong>Tolerance:</strong> Shows strong resistance to major cocoa diseases, ensuring a long plantation lifespan.</p>
-                        <p><strong>Export Quality:</strong> Beans meet premium standards for local and international markets.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p class="font-bold text-green-800">Early Bearing Variety</p>
+                        <p>✔ CCN-51 is an improved variety recognized for bearing fruits earlier than traditional types. Shortens the waiting period before income generation.</p>
+                        <p class="font-bold text-green-800">High Pod and Bean Yield</p>
+                        <p>✔ Produces a high number of pods per tree with well-filled beans. Achieve increased productivity per hectare, leading to higher annual output.</p>
+                        <p class="font-bold text-green-800">Improved Disease Tolerance</p>
+                        <p>✔ Shows strong tolerance to major cocoa diseases, reducing plant loss and maintenance costs. Healthier trees result in longer plantation lifespan.</p>
+                        <p class="font-bold text-green-800">Excellent Bean Quality</p>
+                        <p>✔ Beans meet quality standards suitable for local processing and international export markets, providing access to premium buyers.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦500</span>
@@ -166,20 +183,20 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="plantain.JPG">
-                    <img src="plantain1.JPG">
-                    <img src="plantain2.JPG">
-                    <img src="plantain3.JPG">
+                    <img src="images/plantain.JPG">
+                    <img src="images/plantain1.JPG">
+                    <img src="images/plantain2.JPG">
+                    <img src="images/plantain3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-black text-green-900 uppercase">Hybrid Plantain</h3>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Description:</strong> Fast-growing, high-yield plantain with superior fruit quality and disease resistance.</p>
-                        <p><strong>Commitment:</strong> We provide vigorous, disease-free suckers to ensure early maturity and sustainable returns.</p>
-                        <p><strong>Benefits:</strong> Early fruiting and robust bunches. Crucial for food security and consistent income streams.</p>
-                        <p><strong>Use:</strong> Perfect for fresh consumption, local markets, and industrial processing into flour or chips.</p>
+                    <h3 class="text-2xl font-black text-green-900 uppercase">Giant Hybrid Plantain</h3>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p><strong>Description:</strong> Fast-growing, high-yield plantain variety with superior fruit quality and disease resistance. Adaptable to various soil types, these suckers mature early and deliver consistent harvests.</p>
+                        <p><strong>Our Commitment:</strong> We provide farmers with high-quality, vigorous hybrid plantain suckers that ensure maximum productivity and early maturity.</p>
+                        <p><strong>Use:</strong> Ideal for fresh consumption, local markets, and industrial processing into chips or flour.</p>
+                        <p><strong>Benefits:</strong> Early fruiting, robust bunches, and high yield per hectare. Pest and disease resistant, supporting continuous production cycles.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦400</span>
@@ -195,19 +212,19 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="banana.WEBP">
-                    <img src="banana1.JPG">
-                    <img src="banana2.JPG">
-                    <img src="banana3.JPG">
+                    <img src="images/banana.WEBP">
+                    <img src="images/banana1.JPG">
+                    <img src="images/banana2.JPG">
+                    <img src="images/banana3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-black text-green-900 uppercase">Hybrid Banana</h3>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Description:</strong> Fast-growing, high-yield variety with market-ready fruit year-round.</p>
-                        <p><strong>Quality:</strong> Superior suckers that deliver high yields and resistance to common pests.</p>
-                        <p><strong>Income:</strong> Low-maintenance and adaptable, supporting multiple harvest cycles per year for steady revenue.</p>
+                    <h3 class="text-2xl font-black text-green-900 uppercase">Giant Hybrid Banana</h3>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p><strong>Description:</strong> Fast-growing, high-yield variety with superior fruit quality and disease resistance. Enjoy market-ready fruit all year round.</p>
+                        <p><strong>Our Commitment:</strong> Superior hybrid banana suckers that deliver high yields. We ensure only vigorous, healthy suckers reach our clients to support productivity.</p>
+                        <p><strong>Benefits:</strong> Early fruiting, high yield, and resistance to common pests. Low-maintenance and adaptable, supporting multiple harvest cycles per year for consistent income.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦400</span>
@@ -223,19 +240,20 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="pineapple.JPG">
-                    <img src="pineapple1.JPG">
-                    <img src="pineapple2.JPG">
-                    <img src="pineapple3.JPG">
+                    <img src="images/pineapple.JPG">
+                    <img src="images/pineapple1.JPG">
+                    <img src="images/pineapple2.JPG">
+                    <img src="images/pineapple3.JPG">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Pineapple Suckers</h3>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Varieties:</strong> MD2, Smooth Cayenne, and Queen varieties available.</p>
-                        <p><strong>Yield:</strong> Guaranteed superior growth and high marketable yields across diverse soil conditions.</p>
-                        <p><strong>Use:</strong> Juicy pineapples for fresh consumption or industrial processing into juice and canned products.</p>
+                    <p class="text-green-600 font-bold mb-4 text-sm italic">(MD2, Smooth Cayenne, Queen)</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p><strong>Our Commitment:</strong> High-quality pineapple suckers that guarantee superior growth, early fruiting, and high marketable yield. Ready to thrive under diverse soil conditions.</p>
+                        <p><strong>Use:</strong> Ideal for smallholder farms and commercial plantations. Produce sweet, juicy pineapples for fresh consumption or industrial processing.</p>
+                        <p><strong>Benefits:</strong> Early fruiting, pest resistance, and consistent production cycles. Provides year-round cash flow and improved farm sustainability.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦300</span>
@@ -251,19 +269,22 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
+            <div class="bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-xl flex flex-col">
                 <div class="image-gallery">
-                    <img src="Yamsett.JPG">
-                    <img src="yam.jpg">
-                    <img src="yam1.jpg">
-                    <img src="yam2.jpg">
+                    <img src="images/Yamsett.JPG">
+                    <img src="images/yam.jpg">
+                    <img src="images/yam1.jpg">
+                    <img src="images/yam2.jpg">
                 </div>
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-2xl font-black text-green-900 uppercase">Treated Yam Setts</h3>
-                    <div class="bg-slate-50 p-5 rounded-xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Germination:</strong> Prepared to enhance sprouting, ensuring higher field establishment compared to untreated setts.</p>
-                        <p><strong>Protection:</strong> Treatment reduces fungal and bacterial infections, protecting setts during early growth stages.</p>
-                        <p><strong>Growth:</strong> Promotes healthy vine development and stronger tuber formation for higher yield assurance.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl h-80 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
+                        <p class="font-bold text-green-800">Improved Germination Rate</p>
+                        <p>✔ Prepared to enhance sprouting, ensuring higher field establishment compared to untreated setts.</p>
+                        <p class="font-bold text-green-800">Disease and Rot Control</p>
+                        <p>✔ Treatment reduces fungal and bacterial infections, protecting setts during early growth stages.</p>
+                        <p class="font-bold text-green-800">Strong Early Growth</p>
+                        <p>✔ Promotes healthy vine development and stronger tuber formation for higher yield assurance.</p>
                     </div>
                     <div class="mt-auto border-t pt-6 flex items-center justify-between">
                         <span class="text-3xl font-black text-slate-800">₦400</span>
