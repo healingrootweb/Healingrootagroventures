@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Root Agro Ventures | Professional Seedlings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(rgba(18, 53, 36, 0.8), rgba(18, 53, 36, 0.8)), url('farm_hero.JPEG'); background-size: cover; background-position: center; }
+        .product-card { transition: all 0.3s ease; border: 1px solid #f0f0f0; }
+        .product-card:hover { transform: translateY(-10px); shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #166534; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div class="bg-green-900 text-white text-xs py-2 px-4 flex justify-between items-center">
+        <span><i class="fa-solid fa-location-dot mr-2"></i> Quality Agro Solutions Nigeria</span>
+        <a href="tel:08153729342" class="hover:text-green-300"><i class="fa-solid fa-phone mr-2"></i>08153729342</a>
+    </div>
+
+    <nav class="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-green-100">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Healing Root Logo" class="h-14 w-14">
+                <div>
+                    <h1 class="font-bold text-green-900 leading-none text-2xl tracking-tight">HEALING ROOT</h1>
+                    <p class="text-[10px] text-green-700 tracking-[0.2em] uppercase font-bold">Agro Ventures</p>
+                </div>
+            </div>
+            <button onclick="toggleCart()" class="group relative p-3 bg-green-800 rounded-full text-white transition-all hover:bg-green-700">
+                <i class="fa-solid fa-basket-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-yellow-500 text-green-900 text-[11px] font-black px-2 py-0.5 rounded-full border-2 border-white group-hover:scale-110 transition-transform">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative h-[70vh] flex items-center justify-center text-center text-white hero-gradient px-4">
+        <div class="max-w-4xl">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Superior Seedlings for <br><span class="text-green-400 underline decoration-yellow-500">Maximum Yield.</span></h2>
+            <p class="text-xl text-gray-200 mb-10 font-light tracking-wide">Empowering farmers with improved varieties for a profitable harvest.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#shop" class="bg-green-600 hover:bg-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all shadow-xl">Browse Catalog</a>
+                <a href="https://wa.me/2349138938301" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded-xl font-bold text-lg transition-all">Chat with Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <main id="shop" class="max-w-7xl mx-auto px-4 py-24">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-black text-green-900 mb-4 uppercase tracking-tight">Product Catalog</h3>
+            <div class="h-1.5 w-24 bg-yellow-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="cassava.JPG" alt="Cassava Stems" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-green-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Top Seller</span>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Improved Cassava Stems</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">(TME 419 – IITA Improved)</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Early Maturity:</strong> Reaches harvestable stage earlier than local varieties, reducing exposure to drought and pests.</p>
+                        <p><strong>High Yield:</strong> Develops large, well-filled tubers with excellent starch content even under varying weather.</p>
+                        <p><strong>Disease Resistance:</strong> Bred to withstand Cassava Mosaic Disease (CMD).</p>
+                        <p><strong>Processing:</strong> Excellent for Garri, Fufu, Flour, and Starch production.</p>
+                        <p><strong>Market Trusted:</strong> Widely accepted across Nigeria for commercial and small-scale farming.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦1,000</span>
+                        <button onclick="addToCart('Cassava Stems (TME 419)', 1000)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="fertilizer.JPG" alt="Oil Palm" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Oil Palm Seedlings</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">(Tenera Variety)</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>High Oil Yield:</strong> Thin shell and thick mesocarp for maximum extraction rates.</p>
+                        <p><strong>Vigorous Growth:</strong> Fast establishment with well-developed root systems.</p>
+                        <p><strong>Early Fruiting:</strong> Quicker cash flow compared to unimproved varieties.</p>
+                        <p><strong>Long-Term:</strong> Sustained income for 25–30 years; ideal for generational wealth.</p>
+                        <p><strong>Disease Tolerance:</strong> Bred to withstand common field challenges.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦1,000</span>
+                        <button onclick="addToCart('Oil Palm (Tenera)', 1000)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="coconut.JPG" alt="Coconut" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Hybrid Coconut</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">(MYD × WAT)</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Superior Performance:</strong> Cross between Malayan Yellow Dwarf and West African Tall.</p>
+                        <p><strong>Early Maturity:</strong> Starts production much earlier than traditional tall varieties.</p>
+                        <p><strong>High Yield:</strong> More nuts per tree with consistent annual production.</p>
+                        <p><strong>Climate Adaptation:</strong> Performs well in coastal and inland Nigerian environments.</p>
+                        <p><strong>Multiple Uses:</strong> Fresh water, Oil, Copra, and industrial by-products.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦4,500</span>
+                        <button onclick="addToCart('Hybrid Coconut (MYD x WAT)', 4500)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="fertilizer1.JPG" alt="Cocoa" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Cocoa Nursery Plants</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">(CCN-51 Variety)</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Early Bearing:</strong> Shortens the waiting period before first income generation.</p>
+                        <p><strong>High Pod Yield:</strong> High number of pods per tree with well-filled beans.</p>
+                        <p><strong>Disease Tolerance:</strong> Strong tolerance to major cocoa diseases, reducing tree loss.</p>
+                        <p><strong>Export Quality:</strong> Meets standards for local processing and international export.</p>
+                        <p><strong>Sustainable:</strong> A valuable cash crop for long-term agribusiness growth.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦500</span>
+                        <button onclick="addToCart('Cocoa Nursery (CCN-51)', 500)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="farm.PNG" alt="Plantain" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Giant Hybrid Plantain</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">Suckers</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Fast Growing:</strong> Vigorous hybrids ensuring maximum productivity and early maturity.</p>
+                        <p><strong>Resilient:</strong> Pest and disease resistant; adaptable to diverse soil/climates.</p>
+                        <p><strong>Usage:</strong> Ideal for chips, flour, or fresh consumption with heavy, uniform bunches.</p>
+                        <p><strong>Steady Income:</strong> Continuous production cycles and high yield per hectare.</p>
+                        <p><strong>Selection:</strong> Carefully selected, disease-free, strong suckers.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦400</span>
+                        <button onclick="addToCart('Giant Plantain Sucker', 400)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="farm_hero.JPEG" alt="Banana" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Giant Hybrid Banana</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">Suckers</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>High Yield:</strong> Produces sweet, uniform bananas suitable for industrial processing.</p>
+                        <p><strong>Early Fruiting:</strong> Guarantees quicker returns and resistance to common pests.</p>
+                        <p><strong>Low Maintenance:</strong> Thrives in varied regions for reliable, quality fruit year-round.</p>
+                        <p><strong>Sustainability:</strong> Enhances profitability while maintaining soil health.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦400</span>
+                        <button onclick="addToCart('Giant Banana Sucker', 400)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="fertilizer2.WEBP" alt="Pineapple" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Pineapple Suckers</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">(MD2, Smooth Cayenne, Queen)</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Varieties:</strong> High-quality suckers guaranteeing superior growth and juice content.</p>
+                        <p><strong>Adaptable:</strong> Grows quickly in both wet and dry environments.</p>
+                        <p><strong>Benefits:</strong> Early fruiting, disease resistance, and year-round cash flow.</p>
+                        <p><strong>Commercial:</strong> Ideal for fresh markets or industrial canning and drying.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦300</span>
+                        <button onclick="addToCart('Pineapple Sucker', 300)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card bg-white rounded-3xl overflow-hidden flex flex-col shadow-sm">
+                <div class="h-64 relative overflow-hidden">
+                    <img src="Yamsett.JPG" alt="Yam Setts" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-bold text-green-900 mb-2">Treated Yam Setts</h4>
+                    <p class="text-sm font-bold text-green-600 mb-4 uppercase tracking-tighter italic">Premium Quality</p>
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 custom-scrollbar max-h-48 overflow-y-auto pr-2">
+                        <p><strong>Germination:</strong> Enhanced sprouting rates for high field establishment.</p>
+                        <p><strong>Disease Control:</strong> Treated to reduce fungal and bacterial infections (Rot control).</p>
+                        <p><strong>Growth:</strong> Promotes healthy vine development and stronger tuber formation.</p>
+                        <p><strong>Reliability:</strong> Higher yield assurance for commercial yam farmers.</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-auto pt-6 border-t border-gray-100">
+                        <span class="text-3xl font-black text-slate-800">₦400</span>
+                        <button onclick="addToCart('Treated Yam Setts', 400)" class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-full md:w-[450px] bg-white z-[100] shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
+        <div class="p-8 bg-green-900 text-white flex justify-between items-center">
+            <div>
+                <h3 class="text-2xl font-black">Your Basket</h3>
+                <p class="text-xs text-green-300 uppercase tracking-widest">Healing Root Agro Ventures</p>
+            </div>
+            <button onclick="toggleCart()" class="h-12 w-12 flex items-center justify-center rounded-full hover:bg-green-800 transition-colors">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="cart-items" class="flex-grow p-8 overflow-y-auto space-y-4 custom-scrollbar">
+            </div>
+
+        <div class="p-8 border-t-2 border-slate-50 bg-slate-50/50 backdrop-blur-sm">
+            <div class="flex justify-between text-2xl font-black mb-8 text-green-900">
+                <span>TOTAL ESTIMATE</span>
+                <span id="cart-total">₦0</span>
+            </div>
+            <button onclick="checkout()" class="w-full bg-[#25D366] text-white py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-4 shadow-xl shadow-green-200 hover:scale-[1.02] active:scale-95 transition-all">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> ORDER ON WHATSAPP
+            </button>
+            <p class="text-[10px] text-center mt-4 text-slate-400 font-bold uppercase tracking-widest">Safe & Secured Direct Order</p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('translate-x-full');
+        }
+
+        function addToCart(name, price) {
+            cart.push({name, price});
+            updateUI();
+            if(document.getElementById('cart-sidebar').classList.contains('translate-x-full')) toggleCart();
+        }
+
+        function remove(index) {
+            cart.splice(index, 1);
+            updateUI();
+        }
+
+        function updateUI() {
+            const container = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+            const countEl = document.getElementById('cart-count');
+            
+            container.innerHTML = cart.length === 0 ? 
+                '<div class="text-center mt-20 text-slate-300"><i class="fa-solid fa-seedling text-6xl mb-4"></i><p class="font-bold">Your basket is empty</p></div>' : '';
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                container.innerHTML += `
+                    <div class="flex justify-between items-center bg-white p-5 rounded-2xl border border-slate-100 shadow-sm animate-fadeIn">
+                        <div>
+                            <p class="font-black text-green-900 text-base">${item.name}</p>
+                            <p class="text-green-600 font-bold tracking-tight">₦${item.price.toLocaleString()}</p>
+                        </div>
+                        <button onclick="remove(${index})" class="h-10 w-10 text-red-400 hover:bg-red-50 rounded-full transition-colors">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+            });
+            
+            totalEl.innerText = `₦${total.toLocaleString()}`;
+            countEl.innerText = cart.length;
+        }
+
+        function checkout() {
+            if(cart.length === 0) return alert("Your basket is empty!");
+            
+            let text = "*ORDER FROM HEALING ROOT WEBSITE*%0A---------------------------%0A";
+            cart.forEach((item, i) => {
+                text += `${i+1}. ${item.name} - ₦${item.price.toLocaleString()}%0A`;
+            });
+            
+            let total = cart.reduce((s, i) => s + i.price, 0);
+            text += `---------------------------%0A*Total: ₦${total.toLocaleString()}*%0A%0A_Please confirm availability for delivery._`;
+            
+            window.open(`https://wa.me/2349138938301?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
