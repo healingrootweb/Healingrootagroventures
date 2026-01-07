@@ -18,6 +18,9 @@
         .floating-call { position: fixed; bottom: 20px; left: 20px; z-index: 90; transition: transform 0.3s; }
         .floating-fb { position: fixed; bottom: 90px; left: 20px; z-index: 90; transition: transform 0.3s; }
         .nav-link { position: relative; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em; color: #1e293b; }
+        
+        /* Scroll to Top Button Style */
+        #backToTop { position: fixed; bottom: 160px; left: 20px; z-index: 90; display: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -247,7 +250,7 @@
                     <h3 class="text-2xl font-black text-green-900 uppercase">Giant Hybrid Banana</h3>
                     <p class="text-green-600 font-bold text-xs italic mb-4">High Yield Variety</p>
                     <div class="bg-slate-50 p-6 rounded-2xl h-64 overflow-y-auto custom-scrollbar text-sm text-slate-700 space-y-4 mb-6">
-                        <p><strong>Description:</strong> Fast-growing, high-yield banana variety with superior fruit quality and disease resistance. Adaptable to various soil types, these suckers mature early and deliver consistent harvests, making them ideal for commercial plantations or home gardens. Enjoy robust growth and market-ready plantains all year.</p>
+                        <p><strong>Description:</strong> Fast-growing, high-yield banner variety with superior fruit quality and disease resistance. Adaptable to various soil types, these suckers mature early and deliver consistent harvests, making them ideal for commercial plantations or home gardens. Enjoy robust growth and market-ready plantains all year.</p>
                         <p class="font-bold text-green-800">Our Commitment:</p>
                         <p>Healing Root Agro Ventures is committed to providing farmers with superior hybrid banana suckers that deliver high yields, early fruiting, and disease resistance. We ensure only vigorous, healthy suckers reach our clients, supporting both smallholder and large-scale plantations for maximum productivity and profitability.</p>
                         <p class="font-bold text-green-800">Use:</p>
@@ -386,6 +389,48 @@
         </div>
     </section>
 
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-green-900 uppercase italic">What Farmers Are Saying</h2>
+                <div class="h-1 w-16 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="text-yellow-500 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-700 italic mb-6">"The TME 419 cassava stems arrived fresh in Benue. 95% sprouting rate within the first two weeks!"</p>
+                    <p class="font-black text-green-900 text-sm">— Chief Okechukwu, Makurdi</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="text-yellow-500 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-700 italic mb-6">"Healing Root's Tenera palms are the real deal. The seedlings are very vigorous and healthy."</p>
+                    <p class="font-black text-green-900 text-sm">— Engr. Segun, Ogun State</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="text-yellow-500 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-700 italic mb-6">"Fast delivery to Kaduna. The packaging in crates prevented any damage to my hybrid plantains."</p>
+                    <p class="font-black text-green-900 text-sm">— Mallam Yusuf, Kaduna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-black text-green-900 uppercase italic text-center mb-10">Common Questions</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h4 class="font-black text-green-900 uppercase text-sm mb-2">How much is delivery?</h4>
+                    <p class="text-slate-600 text-sm font-medium">Logistics prices vary based on the driver and current market rates. We discuss and finalize the most affordable delivery option with you during our WhatsApp chat.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                    <h4 class="font-black text-green-900 uppercase text-sm mb-2">How are the plants packaged?</h4>
+                    <p class="text-slate-600 text-sm font-medium">We use ventilated crates and professional handling. This ensures your seedlings stay fresh and healthy until they reach your farm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-4">
             <div class="bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
@@ -450,8 +495,23 @@
         </div>
     </div>
 
+    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="bg-yellow-500 text-green-900 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center border-2 border-white transition-transform hover:scale-110">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script>
         let cart = [];
+        
+        // Scroll to Top visibility logic
+        window.onscroll = function() {
+            let btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
         function updateQty(id, delta) {
             const el = document.getElementById(`qty-${id}`);
             let val = parseInt(el.innerText) + delta;
