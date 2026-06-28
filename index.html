@@ -20,7 +20,7 @@
         .image-gallery img { width: 100%; height: 160px; object-fit: cover; transition: transform 0.3s; cursor: pointer; }
         .image-gallery img:hover { filter: brightness(1.1); transform: scale(1.02); }
         
-        .float-btn { position: fixed; left: 20px; z-index: 90; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); width: 52px; height: 52px; display: flex; items-center; justify-content: center; border-radius: 16px; border: 2px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .float-btn { position: fixed; left: 20px; z-index: 90; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 2px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         .float-btn:hover { transform: scale(1.1) translateX(5px); }
         .btn-call { bottom: 20px; background: #15803d; color: white; }
         .btn-fb { bottom: 80px; background: #1877F2; color: white; }
@@ -35,9 +35,9 @@
 <body class="bg-slate-50 text-slate-900">
 
     <a href="tel:08153729342" class="float-btn btn-call" title="Call Us"><i class="fa-solid fa-phone-volume animate-pulse"></i></a>
-    <a href="https://www.facebook.com/share/1DpTuZSnEa/?mibextid=wwXIfr" target="_blank" class="float-btn btn-fb" title="Facebook"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+    <a href="https://www.facebook.com/share/18hBoRzBQs/?mibextid=wwXIfr" target="_blank" class="float-btn btn-fb" title="Facebook"><i class="fa-brands fa-facebook-f text-lg"></i></a>
     <a href="https://wa.me/2348083835802" target="_blank" class="float-btn btn-wa" title="WhatsApp"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
-    <button onclick="window.botpressWebChat.sendEvent({ type: 'show' })" class="float-btn btn-bot" title="Chat with AI"><i class="fa-solid fa-robot text-lg"></i></button>
+    <a href="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2026/01/27/23/20260127234127-BK03V604.json" target="_blank" class="float-btn btn-bot" title="Chat with AI"><i class="fa-solid fa-robot text-lg"></i></a>
 
     <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -468,13 +468,31 @@
             if(document.getElementById('cart-sidebar').classList.contains('translate-x-full')) toggleCart();
             document.getElementById(`qty-${id}`).innerText = 1;
         }
+        function changeCartInputQty(index, value) {
+            let val = parseInt(value);
+            if (isNaN(val) || val < 1) {
+                val = 1;
+            }
+            cart[index].qty = val;
+            updateUI();
+        }
         function updateUI() {
             const container = document.getElementById('cart-items');
             container.innerHTML = cart.length === 0 ? '<div class="text-center mt-20 text-slate-300 font-bold uppercase text-xs tracking-widest">Your basket is empty</div>' : '';
             let total = 0;
             cart.forEach((item, i) => {
                 total += (item.price * item.qty);
-                container.innerHTML += `<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex justify-between items-center group"><div><p class="font-black text-green-900 uppercase text-xs mb-1">${item.qty}x ${item.name}</p><p class="text-green-600 font-bold">₦${(item.price * item.qty).toLocaleString()}</p></div><button onclick="cart.splice(${i},1);updateUI();" class="text-slate-300 hover:text-red-500 transition-colors"><i class="fa-solid fa-trash-can"></i></button></div>`;
+                container.innerHTML += `<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex justify-between items-center group">
+                    <div class="flex flex-col gap-1 flex-grow mr-4">
+                        <p class="font-black text-green-900 uppercase text-xs mb-1">${item.name}</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 text-xs font-bold uppercase">Qty:</span>
+                            <input type="number" min="1" value="${item.qty}" onchange="changeCartInputQty(${i}, this.value)" class="w-16 px-2 py-1 text-xs border border-slate-200 rounded-md bg-slate-50 font-black text-green-900 focus:outline-none focus:border-green-700">
+                        </div>
+                        <p class="text-green-600 font-bold mt-1">₦${(item.price * item.qty).toLocaleString()}</p>
+                    </div>
+                    <button onclick="cart.splice(${i},1);updateUI();" class="text-slate-300 hover:text-red-500 transition-colors shrink-0"><i class="fa-solid fa-trash-can"></i></button>
+                </div>`;
             });
             document.getElementById('cart-total').innerText = `₦${total.toLocaleString()}`;
             document.getElementById('cart-count').innerText = cart.length;
